@@ -1,15 +1,45 @@
-import arithmetic_operations 
-import advance_operations
-
-# Test the arithmetic operations
-print("**********Test the arithmetic operations**********")
-print("Addition:", arithmetic_operations.add(5, 3))
-print("Subtraction:", arithmetic_operations.sub(5, 3))
-print("Multiplication:", arithmetic_operations.multiply(5, 3))
-print("Division:", arithmetic_operations.divide(5, 3))
+import advance_operations as ad_calculator
+import arithmetic_operations as calculator
+import user_interface as ui
 
 
-#Test the advance operations
-print("***********Test the advance operations*************")
-print("Squre_root:",advance_operations.squre_root(9))
-print("Squre_root:",advance_operations.power(2,9))
+#Display welcome message
+
+ui.display_message("Welcome to the Python Calculator!")
+
+#Get user input
+
+num1 = ui.get_number_input("Enter first number: ")
+num2 = ui.get_number_input("Enter second number: ")
+
+
+#choose operation
+operation = ui.operation_selection()
+
+#perform operations
+
+if operation =='+':
+   result = calculator.add(num1, num2)
+
+elif operation =='-':
+   result = calculator.sub(num1, num2)
+
+elif operation =='*':
+   result = calculator.multiply(num1, num2)
+
+
+elif operation =='/':
+   result = calculator.divide(num1, num2)
+
+
+elif operation =='sqrt':
+   result = ad_calculator.square_root(num1)
+
+elif operation =='pow':
+   result = ad_calculator.power(num1,num2)
+
+
+
+#Display the result
+
+ui.display_message(f'Result: {result}')
