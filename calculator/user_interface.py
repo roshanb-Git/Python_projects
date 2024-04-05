@@ -14,9 +14,9 @@ def get_number_input(prompt):
 
 def operation_selection():
     while True:
-        operation = input("Choose an operation (+, -, *, /, sqrt, pow): ")
+        operation = input("Choose an operation (+, -, *, /, sqrt, pow, fact, or 'q' to quit): ")
         try:
-            if operation in ['+', '-', '*', '/', 'sqrt', 'pow']:
+            if operation in ['+', '-', '*', '/', 'sqrt', 'pow', 'fact', 'q']:
                 return operation
             
 

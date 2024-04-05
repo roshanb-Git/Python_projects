@@ -6,3 +6,7 @@ def square_root(x):
 
 def power(x,y):
     return math.pow(x,y)
+
+
+def factorial(x):
+    return math.factorial(x)
