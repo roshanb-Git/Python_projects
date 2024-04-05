@@ -1,6 +1,6 @@
 from calculator.arithmetic_operations import add, sub, multiply, divide
 from calculator.advance_operations import square_root, power, factorial
-from calculator.user_interface import display_message, get_number_input, operation_selection
+from calculator.user_interface import display_message,display_error, get_number_input, operation_selection
 
 
 
@@ -20,6 +20,10 @@ def main():
       if operation == 'q':
          display_message("Thank you for using the calculator. Goodbye!")
          break
+      #Check if the user wants to reset
+      if operation == 'reset':
+           display_message("Resetting the calculator...")
+           continue
 
       #perform basic operations
       if operation in ['+', '-', '*', '/']:
@@ -29,7 +33,7 @@ def main():
 
             #check if the user is trying to divide by zero
             if operation =='/' and num2 ==0:
-                  display_message("Error division by zero")
+                  display_error("Error division by zero")
                   continue
 
             if operation =='+':
@@ -58,8 +62,16 @@ def main():
             elif operation =='fact':
                   result = factorial(int(num1))
 
+
       #Display the result
       display_message(f'Result:  {result}')
+      
+
+      # Check wheather user wish to continue or break
+      if input('Do you want to continue? (y/n): ') == 'n':
+           display_message("Thank you for using the calculator. Goodbye!")
+           break
+
 
 
 
