@@ -1,6 +1,6 @@
 import math
 
-def squre_root(x):
+def square_root(x):
     return math.sqrt(x)
 
 
