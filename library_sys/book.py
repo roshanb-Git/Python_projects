@@ -1,11 +1,27 @@
 class Book:
-    def __init__(self,title,author,year,category):
+    def __init__(self,title,author,year,available=True):
         self.title =title
         self.author =author
         self.year =year
-        self.category =category
+        self.available =available
 
 
+# pint information of the book
+def display_info(book):
+    print(f"Title: {book.title} \nAuthor: {book.author} \nYear: {book.year}")
 
-def display_info(Book):
-    print(f"Title: {Book.title} \nAuthor: {Book.author} \nYear: {Book.year} \nCategory: {Book.category}")
+# checking availability of the book
+def check_availability(book):
+        if book.available:
+            print(f'{book.title} is available')
+        else:
+            print(f'{book.title} is not available')
+
+# update the availability of the book
+def update_availability(book, status):
+        book.available = status
+        if status:
+            print(f"{book.title} is now available.")
+        else:
+            print(f"{book.title} is now unavailable.")
+

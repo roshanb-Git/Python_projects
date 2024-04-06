@@ -19,7 +19,7 @@ It will contain functions for adding, removing, and retrieving information about
 This module will define a Member class to represent a library member.
 It will contain functions for adding, removing, and retrieving information about members.
 
-4)Library Module (library.py):
+4) Library Module (library.py):
 
 This module will handle operations related to the library system, such as borrowing and returning books, checking availability, etc.
 It will interact with the Book and Member modules.
